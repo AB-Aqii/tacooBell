@@ -16,6 +16,7 @@
     "audit:site": "node scripts/audit-site.mjs"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.1.0",
     "git": "^0.1.5",
     "init": "^0.1.2",
     "lucide-react": "^0.468.0",
