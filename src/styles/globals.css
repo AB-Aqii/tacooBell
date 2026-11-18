@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 20 33 61;
+    --color-primary-soft: 38 58 100;
+    --color-accent: 242 169 0;
+    --color-background: 245 246 248;
+    --color-surface: 255 255 255;
+    --color-foreground: 31 36 48;
+    --color-muted: 91 100 114;
+    --color-border: 221 225 232;
+    --color-focus: 36 89 214;
+    --color-danger: 178 34 34;
+    --color-success: 22 101 52;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background font-sans text-body text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-focus));
+    outline-offset: 2px;
+  }
+
+  .surface-dark :focus-visible {
+    outline-color: rgb(var(--color-accent));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
